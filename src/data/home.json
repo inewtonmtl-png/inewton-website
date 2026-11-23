@@ -1,0 +1,169 @@
+{
+  "bestSellers": [
+    "red-fox-portrait-canvas-wall-art",
+    "cozy-cabin-christmas-village-canvas-wall-art",
+    "goddess-lakshmi-tanjore-gold-canvas-wall-art",
+    "lord-ganesha-marigold-garland-canvas-wall-art",
+    "sunset-mountain-orange-peak-canvas-wall-art",
+    "starry-night-sky-canvas-wall-art",
+    "golden-temple-night-canvas-wall-art",
+    "three-tabby-cats-canvas-wall-art"
+  ],
+  "categories": [
+    {
+      "name": "Diwali",
+      "count": 25,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN016_dining_room.jpg?v=1791093286",
+      "handle": "baby-ganesha-canvas-wall-art"
+    },
+    {
+      "name": "Christmas",
+      "count": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN1080_living_room.jpg?v=1792020772",
+      "handle": "angel-announcing-to-shepherds-canvas-wall-art"
+    },
+    {
+      "name": "Religious & Spiritual",
+      "count": 85,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN815_living_room.jpg?v=1791134410",
+      "handle": "abstract-symmetry-canvas-wall-art"
+    },
+    {
+      "name": "Animals & Wildlife",
+      "count": 277,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN585_living_room.jpg?v=1791115422",
+      "handle": "african-elephant-canvas-wall-art"
+    },
+    {
+      "name": "Abstract",
+      "count": 71,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN819_living_room.jpg?v=1791124927",
+      "handle": "abstract-brushstrokes-canvas-wall-art"
+    },
+    {
+      "name": "Nature & Landscapes",
+      "count": 280,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN411_living_room.jpg?v=1791122357",
+      "handle": "alien-planet-canvas-wall-art"
+    },
+    {
+      "name": "Floral & Botanical",
+      "count": 67,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN1041_dining_room.jpg?v=1792018522",
+      "handle": "antique-tulip-botanical-canvas-wall-art"
+    },
+    {
+      "name": "Ocean & Beach",
+      "count": 18,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN350_living_room.jpg?v=1791126945",
+      "handle": "colorful-kitchen-still-life-canvas-wall-art"
+    },
+    {
+      "name": "Wall Art",
+      "count": 252,
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/iN577_living_room.jpg?v=1791115369",
+      "handle": "african-queen-canvas-wall-art"
+    }
+  ],
+  "bundles": [
+    {
+      "key": "botanical-trio",
+      "name": "Botanical Trio",
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/col003-12-20-3p_mockup.jpg?v=1792384890",
+      "options": [
+        {
+          "handle": "botanical-trio-canvas-wall-art-set-12x20-3p",
+          "label": "3-Piece 12x20 in Gallery-Wrapped Canvases",
+          "price": 85.0,
+          "compareAt": 105.0
+        },
+        {
+          "handle": "botanical-trio-canvas-wall-art-set-16x32-3p",
+          "label": "3-Piece 16x32 in Gallery-Wrapped Canvases",
+          "price": 125.0,
+          "compareAt": 150.0
+        }
+      ]
+    },
+    {
+      "key": "diwali-trio",
+      "name": "Diwali Trio",
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/col005-12-20-3p_mockup.jpg?v=1792384993",
+      "options": [
+        {
+          "handle": "diwali-trio-canvas-wall-art-set-12x20-3p",
+          "label": "3-Piece 12x20 in Gallery-Wrapped Canvases",
+          "price": 85.0,
+          "compareAt": 105.0
+        },
+        {
+          "handle": "diwali-trio-canvas-wall-art-set-16x32-3p",
+          "label": "3-Piece 16x32 in Gallery-Wrapped Canvases",
+          "price": 125.0,
+          "compareAt": 150.0
+        }
+      ]
+    },
+    {
+      "key": "fall-harvest-trio",
+      "name": "Fall Harvest Trio",
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/col004-12-20-3p_mockup.jpg?v=1792384941",
+      "options": [
+        {
+          "handle": "fall-harvest-trio-canvas-wall-art-set-12x20-3p",
+          "label": "3-Piece 12x20 in Gallery-Wrapped Canvases",
+          "price": 85.0,
+          "compareAt": 105.0
+        },
+        {
+          "handle": "fall-harvest-trio-canvas-wall-art-set-16x32-3p",
+          "label": "3-Piece 16x32 in Gallery-Wrapped Canvases",
+          "price": 125.0,
+          "compareAt": 150.0
+        }
+      ]
+    },
+    {
+      "key": "japandi-duo",
+      "name": "Japandi Duo",
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/col001-12-20-2p_mockup.jpg?v=1792384784",
+      "options": [
+        {
+          "handle": "japandi-duo-canvas-wall-art-set-12x20-2p",
+          "label": "2-Piece 12x20 in Gallery-Wrapped Canvases",
+          "price": 59.0,
+          "compareAt": 70.0
+        },
+        {
+          "handle": "japandi-duo-canvas-wall-art-set-16x32-2p",
+          "label": "2-Piece 16x32 in Gallery-Wrapped Canvases",
+          "price": 85.0,
+          "compareAt": 100.0
+        }
+      ]
+    },
+    {
+      "key": "line-art-duo",
+      "name": "Line-art Duo",
+      "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/col002-12-20-2p_mockup.jpg?v=1792384843",
+      "options": [
+        {
+          "handle": "line-art-duo-canvas-wall-art-set-12x20-2p",
+          "label": "2-Piece 12x20 in Gallery-Wrapped Canvases",
+          "price": 59.0,
+          "compareAt": 70.0
+        },
+        {
+          "handle": "line-art-duo-canvas-wall-art-set-16x32-2p",
+          "label": "2-Piece 16x32 in Gallery-Wrapped Canvases",
+          "price": 85.0,
+          "compareAt": 100.0
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "handle": "red-fox-portrait-canvas-wall-art",
+    "image": "https://cdn.shopify.com/s/files/1/0950/7622/1175/files/mockup_fox.jpg?v=1791677462"
+  }
+}
