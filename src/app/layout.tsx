@@ -10,9 +10,25 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://inewton.ca"),
   title: "iNewton — Canvas Wall Art",
   description:
     "Canvas wall art prints, gallery-wrapped on wood frames, ready to hang. Free shipping over $75 in Canada and the US. Use code ART10 for 10% off.",
+  openGraph: {
+    title: "iNewton — Canvas Wall Art",
+    description:
+      "Canvas wall art prints, gallery-wrapped on wood frames, ready to hang. Free shipping over $75 in Canada and the US. Use code ART10 for 10% off.",
+    url: "https://inewton.ca",
+    siteName: "iNewton",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iNewton — Canvas Wall Art",
+    description:
+      "Canvas wall art prints, gallery-wrapped on wood frames, ready to hang. Free shipping over $75 in Canada and the US. Use code ART10 for 10% off.",
+  },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -58,6 +58,7 @@ export default function CartPage() {
         )}
         <div className="ship-bar"><div style={{ width: `${progress}%` }} /></div>
       </div>
+      <div className="cart-table-wrap">
       <table className="cart-table">
         <thead>
           <tr><th>Artwork</th><th>Size</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr>
@@ -84,11 +85,12 @@ export default function CartPage() {
           ))}
         </tbody>
       </table>
+      </div>
       <div style={{ textAlign: "right", marginTop: 20 }}>
         <p style={{ margin: "4px 0" }}>Subtotal: <b>{shortPrice(subtotal)}</b></p>
         <p style={{ margin: "4px 0" }}>Shipping: <b>{shipping === 0 ? "FREE" : shortPrice(shipping)}</b></p>
         <p style={{ margin: "4px 0", fontSize: 20 }}>Total: <b>{shortPrice(subtotal + shipping)}</b> CAD</p>
-        <p style={{ fontSize: 13, color: "#6f6a61" }}>Use code ART10 at checkout for 10% off. Test mode — no real payment is taken in this preview.</p>
+        <p style={{ fontSize: 13, color: "#6f6a61" }}>Use code ART10 at checkout for 10% off.</p>
         {error && <p style={{ color: "#a33", fontSize: 14 }}>{error}</p>}
         <button className="btn btn-gold" onClick={checkout} disabled={busy} style={{ marginTop: 8 }}>
           {busy ? "Redirecting to Stripe…" : "Checkout with Stripe →"}

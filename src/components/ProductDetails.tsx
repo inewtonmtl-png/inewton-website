@@ -28,16 +28,29 @@ export default function ProductDetails({ product }: { product: Product }) {
   const allVariants = product.variants;
   const [selectedSku, setSelectedSku] = useState<string>(() => {
     const cheapest = [...allVariants].sort((a, b) => a.price - b.price)[0];
-    return cheapest.sku;
+    return cheapest?.sku ?? "";
   });
   const selected = allVariants.find((v) => v.sku === selectedSku) ?? allVariants[0];
+  const images = product.images ?? [];
+  const mainImage = images[Math.min(imgIdx, Math.max(0, images.length - 1))];
+
+  if (!selected) {
+    return (
+      <div className="product-page container">
+        <div>
+          <h1 style={{ fontSize: 34, lineHeight: 1.2 }}>{product.title}</h1>
+          <p style={{ color: "#6f6a61" }}>This design is currently unavailable.</p>
+        </div>
+      </div>
+    );
+  }
 
   const handleAdd = () => {
     add(
       {
         handle: product.handle,
         title: product.title,
-        image: product.images[0].url,
+        image: product.images[0]?.url ?? "/favicon.svg",
         size: `${selected.size} in`,
         sku: selected.sku,
         price: selected.price,
@@ -53,22 +66,42 @@ export default function ProductDetails({ product }: { product: Product }) {
     <div className="product-page container">
       <div>
         <div className="gallery-main">
-          <Image
-            src={product.images[imgIdx].url}
-            alt={product.title}
-            width={1200}
-            height={900}
-            priority
-            style={{ width: "100%", height: "auto" }}
-          />
+          {mainImage ? (
+            <Image
+              src={mainImage.url}
+              alt={product.title}
+              width={1200}
+              height={900}
+              priority
+              style={{ width: "100%", height: "auto" }}
+            />
+          ) : (
+            <div
+              style={{
+                aspectRatio: "4 / 3",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#111111",
+                color: "#C9A86A",
+                fontFamily: "Georgia, serif",
+                fontSize: 64,
+                fontWeight: 700,
+              }}
+            >
+              iN
+            </div>
+          )}
         </div>
+        {images.length > 0 && (
         <div className="thumbs">
-          {product.images.map((im, i) => (
+          {images.map((im, i) => (
             <button key={im.url} className={i === imgIdx ? "active" : ""} onClick={() => setImgIdx(i)} aria-label={`View image ${i + 1}`}>
               <Image src={im.url} alt="" width={152} height={112} loading="lazy" />
             </button>
           ))}
         </div>
+        )}
       </div>
       <div>
         <p style={{ margin: "0 0 6px", color: "#6f6a61", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase" }}>

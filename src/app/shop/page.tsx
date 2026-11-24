@@ -21,16 +21,27 @@ function ShopInner() {
   const params = useSearchParams();
   const catParam = params.get("cat") || "All";
   const [items, setItems] = useState<IndexItem[]>([]);
+  const [loadError, setLoadError] = useState(false);
   const [q, setQ] = useState("");
   const [orient, setOrient] = useState<string>("all");
   const [cat, setCat] = useState<string>(catParam);
   const [sort, setSort] = useState("featured");
   const [page, setPage] = useState(1);
 
-  useEffect(() => {
+  const loadIndex = () => {
+    setLoadError(false);
     fetch("/data/index.json")
-      .then((r) => r.json())
-      .then((d: IndexItem[]) => setItems(d));
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((d: IndexItem[]) => setItems(d))
+      .catch(() => setLoadError(true));
+  };
+
+  useEffect(() => {
+    loadIndex();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => setCat(catParam), [catParam]);
@@ -103,6 +114,12 @@ function ShopInner() {
           <ProductCard key={p.handle} p={{ handle: p.handle, title: p.title, image: p.image, minPrice: p.minPrice }} />
         ))}
       </div>
+      {loadError && items.length === 0 && (
+        <div style={{ padding: "20px 0", textAlign: "center" }}>
+          <p>Couldn&apos;t load the designs — please check your connection and try again.</p>
+          <button className="btn btn-outline" onClick={loadIndex}>Retry</button>
+        </div>
+      )}
       {filtered.length === 0 && items.length > 0 && (
         <p style={{ padding: "20px 0" }}>No designs match that search. Try another word or clear the filters.</p>
       )}

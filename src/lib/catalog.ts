@@ -35,6 +35,15 @@ export function getProduct(handle: string): Product | undefined {
   return all.find((p) => p.handle === handle);
 }
 
+/** Server-side price lookup: find the product + variant for a SKU. */
+export function getVariantBySku(sku: string): { product: Product; variant: Variant } | undefined {
+  for (const p of all) {
+    const variant = p.variants.find((v) => v.sku === sku);
+    if (variant) return { product: p, variant };
+  }
+  return undefined;
+}
+
 export function getHomeData() {
   return home as {
     bestSellers: string[];

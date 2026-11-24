@@ -24,6 +24,14 @@ export default function Footer() {
             <p style={{ margin: 0 }}><Link href="/shop?cat=Religious%20%26%20Spiritual">Religious &amp; spiritual</Link></p>
           </div>
           <div>
+            <h3>Help</h3>
+            <p style={{ margin: "0 0 6px" }}><Link href="/shipping">Shipping</Link></p>
+            <p style={{ margin: "0 0 6px" }}><Link href="/returns">Returns &amp; replacements</Link></p>
+            <p style={{ margin: "0 0 6px" }}><Link href="/privacy">Privacy policy</Link></p>
+            <p style={{ margin: "0 0 6px" }}><Link href="/terms">Terms of service</Link></p>
+            <p style={{ margin: 0 }}><Link href="/contact">Contact us</Link></p>
+          </div>
+          <div>
             <h3>Follow us</h3>
             <p style={{ margin: "0 0 6px" }}>
               <a href="https://www.tiktok.com/@inewton.ca" target="_blank" rel="noreferrer">TikTok — @inewton.ca</a>
@@ -38,7 +46,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           © 2026 iNewton · inewton.ca · Prices in CAD. Use code ART10 for 10% off.
-          Preview site — the live store is still on Shopify until the switch is confirmed.
+          Free shipping over $75 · Secure checkout with Stripe.
         </div>
       </div>
     </footer>
